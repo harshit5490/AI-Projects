@@ -217,4 +217,4 @@ employees = np.array([
 ])
 weights = np.array([0.5,0.2,0.3])
 
-print(employees @ weights)
+# print(employees @ weights)

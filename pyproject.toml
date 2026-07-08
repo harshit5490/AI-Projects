@@ -1,9 +1,10 @@
 [project]
-name = "week-1"
+name = "ai-engineer-bootcamp"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "scikit-learn>=1.9.0",
+    "numpy>=2.5.1",
+    "pandas>=3.0.3",
 ]
