@@ -1,0 +1,11 @@
+,EmployeeID,Name,Age,Salary,Experience,Manager,Bonus,Tax,Net Salary,Salary Category,Department_AI,Department_Finance,Department_HR,Department_IT
+0,101,Harshit,24,65000,2,Rajesh,6500.0,3250.0,68250.0,Normal,True,False,False,False
+1,102,Rahul,25,55000,3,Anita,5500.0,2750.0,57750.0,Normal,False,False,True,False
+2,103,Amit,23,50000,1,Vivek,5000.0,2500.0,52500.0,Normal,False,False,False,True
+3,104,Priya,26,70000,4,Sunils,7000.0,3500.0,73500.0,Normal,False,True,False,False
+4,105,Neha,27,80000,5,Rajesh,8000.0,4000.0,84000.0,High,True,False,False,False
+5,106,Rohan,29,90000,6,Vivek,9000.0,4500.0,94500.0,High,False,False,False,True
+6,107,Anjali,24,58000,2,Anita,5800.0,2900.0,60900.0,Normal,False,False,True,False
+7,108,Vikas,31,100000,8,Sunils,10000.0,5000.0,105000.0,High,False,True,False,False
+8,109,Sneha,28,85000,5,Rajesh,8500.0,4250.0,89250.0,High,True,False,False,False
+9,110,Karan,26,62000,3,Vivek,6200.0,3100.0,65100.0,Normal,False,False,False,True
