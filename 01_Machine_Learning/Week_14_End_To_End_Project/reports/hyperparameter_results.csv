@@ -1,0 +1,2 @@
+learning_rate,max_depth,min_samples_leaf,min_samples_split,n_estimators,Best CV Score
+0.1,3,2,5,150,0.5874271980761551
