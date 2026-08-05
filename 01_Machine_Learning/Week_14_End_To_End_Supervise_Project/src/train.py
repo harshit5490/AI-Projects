@@ -67,7 +67,7 @@ def load_training_data():
         PROCESSED_DIR / "y_test.csv"
     ).squeeze()
 
-    logger.info("Training data loaded.\n")
+    logger.info("Training data loaded.")
 
     return X_train, X_test, y_train, y_test
 
@@ -243,7 +243,10 @@ def evaluate_model(
         prediction_time,
     )
 
-def save_model(model, model_name):
+def save_model(
+    model,
+    model_name: str,
+    ) -> None:
     """
     Save trained model.
     """
@@ -262,6 +265,10 @@ def save_model(model, model_name):
     joblib.dump(
         model,
         MODELS_DIR / filename,
+    )
+
+    logger.info(
+        f"{filename} saved successfully."
     )
 
 def main():
@@ -337,14 +344,16 @@ def main():
 
         save_model(model, name)    
 
-    joblib.dump(
+    save_model(
         best_model,
-        MODELS_DIR / "best_model.joblib",
+        "best_model",
     )
 
-    logger.info(f"\nBest Model : {best_model_name}")
+    logger.info(f"Best Model : {best_model_name}")
 
-    logger.info(f"Best F1 : {best_f1:.4f}")
+    logger.info(
+        f"Best F1 Score: {best_f1:.4f}"
+    )
 
     results_df = pd.DataFrame(results)
 
@@ -368,6 +377,16 @@ def main():
         REPORTS_DIR / "model_comparison.csv",
         index=False,
     )
+
+    print("\n" + "=" * 80)
+    print("Training Summary")
+    print("=" * 80)
+
+    print(f"Models Trained : {len(models)}")
+    print(f"Best Model     : {best_model_name}")
+    print(f"Best F1 Score  : {best_f1:.4f}")
+
+    print("\nTraining completed successfully.")
 
     return best_model, results_df
 

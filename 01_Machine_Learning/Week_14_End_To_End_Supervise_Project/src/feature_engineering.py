@@ -56,7 +56,7 @@ def split_features_target(
 
     y = df["Churn"]
 
-    print("\nFeatures Shape :", X.shape)
+    print("Features Shape :", X.shape)
     print("Target Shape :", y.shape)
 
     return X, y
@@ -74,7 +74,7 @@ def split_train_test(X, y):
         stratify=y,
     )
 
-    logger.info("\nTrain-Test Split Completed")
+    logger.info("Train-Test Split Completed")
 
     print("X_train :", X_train.shape)
     print("X_test  :", X_test.shape)
@@ -111,7 +111,7 @@ def scale_features(
         X_test[numerical_columns]
     )
 
-    logger.info("\nFeature Scaling Completed")
+    logger.info("Feature Scaling Completed")
 
     return X_train, X_test, scaler
 
@@ -130,7 +130,7 @@ def save_scaler(scaler):
         MODELS_DIR / "scaler.joblib",
     )
 
-    logger.info("\nScaler saved.")
+    logger.info("Scaler saved.")
 
 def save_datasets(
     X_train,
@@ -153,7 +153,7 @@ def save_datasets(
     y_train.to_csv(PROCESSED_DIR / "y_train.csv", index=False)
     y_test.to_csv(PROCESSED_DIR / "y_test.csv", index=False)
 
-    logger.info("\nPrepared datasets saved.")
+    logger.info("Prepared datasets saved.")
 
 def main():
 
