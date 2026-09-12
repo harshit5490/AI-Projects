@@ -11,7 +11,8 @@ from transformers import (
 # ============================================================
 
 # MODEL_NAME = "deepset/roberta-base-squad2"
-MODEL_NAME = "deepset/tinyroberta-squad2"
+# MODEL_NAME = "deepset/tinyroberta-squad2"
+MODEL_NAME = "deepset/minilm-uncased-squad2"
 
 MAX_ANSWER_LENGTH = 15
 

@@ -57,7 +57,8 @@ Example response:
 
 {
     "status": "healthy",
-    "model": "deepset/tinyroberta-squad2"
+    "model": "MiniLM
+deepset/minilm-uncased-squad2"
     
 }
 

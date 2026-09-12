@@ -1,13 +1,13 @@
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.qa_model import MODEL_NAME
 
 
 client = TestClient(app)
 
 
 def test_health():
-
     response = client.get("/health")
 
     assert response.status_code == 200
@@ -15,12 +15,10 @@ def test_health():
     data = response.json()
 
     assert data["status"] == "healthy"
+    assert data["model"] == MODEL_NAME
 
-    # assert data["model"] == "deepset/roberta-base-squad2"
-    assert data["model"] == "deepset/tinyroberta-squad2"
 
 def test_predict_answer():
-
     response = client.post(
         "/predict",
         json={
@@ -28,8 +26,8 @@ def test_predict_answer():
             "context": (
                 "Python was created by Guido van Rossum "
                 "and first released in 1991."
-            )
-        }
+            ),
+        },
     )
 
     assert response.status_code == 200
@@ -37,12 +35,10 @@ def test_predict_answer():
     data = response.json()
 
     assert data["answer"] == "Guido van Rossum"
-
     assert data["has_answer"] is True
 
 
 def test_predict_no_answer():
-
     response = client.post(
         "/predict",
         json={
@@ -50,8 +46,8 @@ def test_predict_no_answer():
             "context": (
                 "Python was created by Guido van Rossum "
                 "and first released in 1991."
-            )
-        }
+            ),
+        },
     )
 
     assert response.status_code == 200
@@ -59,5 +55,4 @@ def test_predict_no_answer():
     data = response.json()
 
     assert data["answer"] == ""
-
-    assert data["has_answer"] is False        
+    assert data["has_answer"] is False
