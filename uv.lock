@@ -30,6 +30,8 @@ dependencies = [
     { name = "seaborn" },
     { name = "sentence-transformers" },
     { name = "sqlalchemy" },
+    { name = "torch" },
+    { name = "transformers" },
     { name = "uvicorn" },
     { name = "xgboost" },
 ]
@@ -54,6 +56,8 @@ requires-dist = [
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "sentence-transformers", specifier = ">=6.0.0" },
     { name = "sqlalchemy", specifier = ">=2.0.51" },
+    { name = "torch", specifier = ">=2.13.0" },
+    { name = "transformers", specifier = ">=5.15.1" },
     { name = "uvicorn", specifier = ">=0.52.1" },
     { name = "xgboost", specifier = ">=3.3.0" },
 ]
