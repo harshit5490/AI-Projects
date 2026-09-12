@@ -57,7 +57,8 @@ Example response:
 
 {
     "status": "healthy",
-    "model": "deepset/roberta-base-squad2"
+    "model": "deepset/tinyroberta-squad2"
+    
 }
 
 ### POST /predict

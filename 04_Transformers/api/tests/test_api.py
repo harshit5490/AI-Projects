@@ -16,7 +16,8 @@ def test_health():
 
     assert data["status"] == "healthy"
 
-    assert data["model"] == "deepset/roberta-base-squad2"
+    # assert data["model"] == "deepset/roberta-base-squad2"
+    assert data["model"] == "deepset/tinyroberta-squad2"
 
 def test_predict_answer():
 

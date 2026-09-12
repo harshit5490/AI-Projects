@@ -10,7 +10,8 @@ from transformers import (
 # 1. MODEL CONFIGURATION
 # ============================================================
 
-MODEL_NAME = "deepset/roberta-base-squad2"
+# MODEL_NAME = "deepset/roberta-base-squad2"
+MODEL_NAME = "deepset/tinyroberta-squad2"
 
 MAX_ANSWER_LENGTH = 15
 
