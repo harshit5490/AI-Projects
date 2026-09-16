@@ -12,31 +12,41 @@ from tool_schemas import (
     GetUserInfoArgs,
 )
 
+from tool_output_schemas import (
+    AddNumbersOutput,
+    MultiplyNumbersOutput,
+    UserInfoOutput,
+)
+
 
 # ============================================================
 # TOOL REGISTRY
 # ============================================================
 
 TOOL_REGISTRY = {
+
     "add_numbers": {
         "function": add_numbers,
-        "schema": AddNumbersArgs,
+        "input_schema": AddNumbersArgs,
+        "output_schema": AddNumbersOutput,
     },
 
     "multiply_numbers": {
         "function": multiply_numbers,
-        "schema": MultiplyNumbersArgs,
+        "input_schema": MultiplyNumbersArgs,
+        "output_schema": MultiplyNumbersOutput,
     },
 
     "get_user_info": {
         "function": get_user_info,
-        "schema": GetUserInfoArgs,
+        "input_schema": GetUserInfoArgs,
+        "output_schema": UserInfoOutput,
     },
 }
 
 
 # ============================================================
-# TOOL EXECUTION
+# EXECUTE TOOL
 # ============================================================
 
 def execute_tool(
@@ -45,7 +55,7 @@ def execute_tool(
 ):
 
     # --------------------------------------------------------
-    # Check whether tool exists
+    # 1. Check tool
     # --------------------------------------------------------
 
     tool = TOOL_REGISTRY.get(tool_name)
@@ -54,21 +64,22 @@ def execute_tool(
 
         return {
             "success": False,
-            "error": f"Unknown tool: {tool_name}"
+            "error": f"Unknown tool: {tool_name}",
         }
 
 
     function = tool["function"]
-    schema = tool["schema"]
+    input_schema = tool["input_schema"]
+    output_schema = tool["output_schema"]
 
 
     # --------------------------------------------------------
-    # Validate arguments
+    # 2. Validate INPUT
     # --------------------------------------------------------
 
     try:
 
-        validated_args = schema.model_validate(
+        validated_args = input_schema.model_validate(
             arguments
         )
 
@@ -82,19 +93,14 @@ def execute_tool(
 
 
     # --------------------------------------------------------
-    # Execute tool
+    # 3. Execute TOOL
     # --------------------------------------------------------
 
     try:
 
-        result = function(
+        raw_result = function(
             **validated_args.model_dump()
         )
-
-        return {
-            "success": True,
-            "result": result,
-        }
 
     except Exception as error:
 
@@ -103,3 +109,34 @@ def execute_tool(
             "error": "Tool execution failed",
             "details": str(error),
         }
+
+
+    # --------------------------------------------------------
+    # 4. Validate OUTPUT
+    # --------------------------------------------------------
+
+    try:
+
+        validated_output = output_schema.model_validate(
+            raw_result
+            if isinstance(raw_result, dict)
+            else {"result": raw_result}
+        )
+
+    except ValidationError as error:
+
+        return {
+            "success": False,
+            "error": "Invalid tool output",
+            "details": error.errors(),
+        }
+
+
+    # --------------------------------------------------------
+    # 5. Return validated result
+    # --------------------------------------------------------
+
+    return {
+        "success": True,
+        "result": validated_output.model_dump(),
+    }
