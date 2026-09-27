@@ -1,0 +1,2 @@
+FastAPI is a modern Python framework used for building
+high-performance APIs and web services.

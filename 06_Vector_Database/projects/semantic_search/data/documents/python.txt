@@ -1,0 +1,2 @@
+Python is a high-level programming language widely used in
+machine learning, data science, automation, and backend development.
