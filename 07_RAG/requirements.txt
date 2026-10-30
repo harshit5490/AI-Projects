@@ -1,15 +1,28 @@
 
+# FastAPI application
 fastapi
 uvicorn[standard]
 python-multipart
 python-dotenv
+
+# Data validation
 pydantic
+
+# LLM integration
 google-genai
-pinecone
-sentence-transformers
-scikit-learn
 huggingface-hub
 transformers
-nltk
-python-docx
+
+# Vector database
+pinecone
+
+# Embeddings and machine learning
+sentence-transformers
+scikit-learn
+
+# Document processing
 pymupdf
+python-docx
+
+# Text processing
+nltk
