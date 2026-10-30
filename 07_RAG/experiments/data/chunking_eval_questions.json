@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is Python used for?",
+    "relevant_phrases": [
+      "Python is a high-level programming language",
+      "machine learning",
+      "data science",
+      "automation"
+    ]
+  },
+  {
+    "question": "What is FastAPI?",
+    "relevant_phrases": [
+      "FastAPI",
+      "Python framework",
+      "building APIs"
+    ]
+  },
+  {
+    "question": "What does a vector database store?",
+    "relevant_phrases": [
+      "vector database",
+      "embeddings",
+      "vectors"
+    ]
+  },
+  {
+    "question": "What is Retrieval-Augmented Generation?",
+    "relevant_phrases": [
+      "Retrieval-Augmented Generation",
+      "RAG"
+    ]
+  },
+  {
+    "question": "What is the purpose of a RAG pipeline?",
+    "relevant_phrases": [
+      "RAG pipeline",
+      "retrieve",
+      "relevant"
+    ]
+  }
+]

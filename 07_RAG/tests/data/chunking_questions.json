@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is Python commonly used for?",
+        "expected_topic": "python"
+    },
+    {
+        "question": "What does FastAPI provide automatically?",
+        "expected_topic": "fastapi"
+    },
+    {
+        "question": "What can Pinecone store along with embeddings?",
+        "expected_topic": "pinecone"
+    },
+    {
+        "question": "How does retrieval augmented generation work?",
+        "expected_topic": "rag"
+    },
+    {
+        "question": "Why are Docker containers useful?",
+        "expected_topic": "docker"
+    }
+]

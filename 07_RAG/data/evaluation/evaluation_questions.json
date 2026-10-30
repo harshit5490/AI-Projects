@@ -1,0 +1,55 @@
+
+[
+  {
+    "id": "q1",
+    "question": "What is FastAPI used for?",
+    "expected_phrases": ["Python framework", "building APIs"],
+    "answerable": true,
+    "relevant_chunk_ids": ["eval-knowledge-v1_chunk_0000"]
+  },
+  {
+    "id": "q2",
+    "question": "How does FastAPI validate requests?",
+    "expected_phrases": ["Python type hints", "request validation"],
+    "answerable": true,
+    "relevant_chunk_ids": ["eval-knowledge-v1_chunk_0000"]
+  },
+  {
+    "id": "q3",
+    "question": "What does Pinecone store and search?",
+    "expected_phrases": ["vector embeddings"],
+    "answerable": true,
+    "relevant_chunk_ids": ["eval-knowledge-v1_chunk_0000"]
+  },
+  {
+    "id": "q4",
+    "question": "What is semantic search based on?",
+    "expected_phrases": ["meaning", "keyword"],
+    "answerable": true,
+    "relevant_chunk_ids": [
+      "eval-knowledge-v1_chunk_0000",
+      "eval-knowledge-v1_chunk_0001"
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "What are the two common stages of a RAG system?",
+    "expected_phrases": ["retrieval", "generation"],
+    "answerable": true,
+    "relevant_chunk_ids": ["eval-knowledge-v1_chunk_0001"]
+  },
+  {
+    "id": "q6",
+    "question": "Who founded Pinecone?",
+    "expected_phrases": [],
+    "answerable": false,
+    "relevant_chunk_ids": []
+  },
+  {
+    "id": "q7",
+    "question": "What is the exact production latency of our RAG API?",
+    "expected_phrases": [],
+    "answerable": false,
+    "relevant_chunk_ids": []
+  }
+]

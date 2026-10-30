@@ -1,0 +1,15 @@
+
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+pydantic
+google-genai
+pinecone
+sentence-transformers
+scikit-learn
+huggingface-hub
+transformers
+nltk
+python-docx
+pymupdf

@@ -1,9 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from app.embeddings.model import EmbeddingModel
 from app.retrieval.search import RetrievalService
-from app.vector_store.chroma import ChromaVectorStore
 from app.ingestion.pipeline import initialize_vector_store
 
 from app.config import (

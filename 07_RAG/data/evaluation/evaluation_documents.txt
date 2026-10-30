@@ -1,0 +1,13 @@
+
+FastAPI is a Python framework for building APIs.
+It uses Python type hints for request validation.
+FastAPI automatically generates OpenAPI documentation.
+Uvicorn can run FastAPI applications as an ASGI server.
+
+Pinecone is a vector database used to store and search vector embeddings.
+Vector embeddings represent data as numerical vectors.
+Semantic search retrieves information based on meaning rather than only exact keyword matches.
+
+Retrieval-augmented generation (RAG) retrieves relevant information from an external knowledge source and provides it to a language model as context.
+A RAG system commonly has a retrieval stage and a generation stage.
+The retrieved context can help ground generated answers in source documents.

@@ -1,0 +1,9 @@
+Python is a high-level programming language used for software development, automation, data science, and machine learning. Python has a large ecosystem of libraries and frameworks. Developers commonly use Python for building APIs, data pipelines, and machine learning applications.
+
+FastAPI is a modern Python web framework for building APIs. It provides automatic API documentation through OpenAPI and supports asynchronous programming. FastAPI applications can be deployed using ASGI servers such as Uvicorn.
+
+Pinecone is a vector database designed for similarity search. It can store vector embeddings along with metadata. Applications can query Pinecone to retrieve vectors that are semantically similar to a user's query.
+
+Retrieval augmented generation combines information retrieval with language generation. A RAG system retrieves relevant documents or chunks and provides them as context to a language model. This allows the model to generate answers based on external knowledge.
+
+Docker packages applications and their dependencies into containers. Containers make it easier to reproduce application environments across development and production systems.

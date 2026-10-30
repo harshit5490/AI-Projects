@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Python used for?",
+    "expected_chunk_index": 0
+  },
+  {
+    "question": "What is FastAPI?",
+    "expected_chunk_index": 1
+  },
+  {
+    "question": "What does a vector database store?",
+    "expected_chunk_index": 2
+  },
+  {
+    "question": "What is Retrieval-Augmented Generation?",
+    "expected_chunk_index": 2
+  },
+  {
+    "question": "What is the purpose of a RAG pipeline?",
+    "expected_chunk_index": 3
+  }
+]
